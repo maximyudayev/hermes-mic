@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysio-hermes-mic"
+version = "0.1.0"
+requires-python = ">=3.7"
+authors = [
+  { name="Maxim Yudayev", email="maxim@yudayev.com" },
+]
+description = "An integrated microphone support module for HERMES"
+keywords = ["embedded ai", "wearables", "sensors", "microphone", "streaming", "realtime processing", "physiology"]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Healthcare Industry",
+  "Intended Audience :: Education",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Medical Science Apps",
+  "Topic :: System :: Distributed Computing"
+]
+dependencies = [
+  "pysio-hermes",
+]
+
+[project.urls]
+Repository = "https://github.com/maximyudayev/hermes-mic.git"
+Issues = "https://github.com/maximyudayev/hermes/issues"
+Changelog = "https://github.com/maximyudayev/hermes-mic/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["hermes.mic"]
