@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pysio-hermes-mic"
-version = "0.1.0"
+dynamic = ["version"]
 requires-python = ">=3.7"
 authors = [
   { name="Maxim Yudayev", email="maxim@yudayev.com" },
@@ -30,11 +30,12 @@ dependencies = [
   "pysio-hermes",
 ]
 
+[tool.setuptools.dynamic]
+version = {attr = "hermes.mic.__version__.__version__"}
+
 [project.urls]
+Homepage = "https://maximyudayev.github.io/hermes"
+Documentation = "https://maximyudayev.github.io/hermes"
 Repository = "https://github.com/maximyudayev/hermes-mic.git"
 Issues = "https://github.com/maximyudayev/hermes/issues"
 Changelog = "https://github.com/maximyudayev/hermes-mic/blob/main/CHANGELOG.md"
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["hermes.mic"]
