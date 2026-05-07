@@ -14,12 +14,9 @@ import traceback
 class MicrophoneStreamer(Producer):
     """Streams audio data from one or more microphones using PyAudio."""
 
-    @property
-    def _log_source_tag(self):
-        return "mic"
-
     def __init__(
         self,
+        topic: str,
         device_names_withAudioKeywords: dict[
             str, str
         ] = None,  # dict from audio device keyword to streaming device name
@@ -30,6 +27,7 @@ class MicrophoneStreamer(Producer):
 
         super(MicrophoneStreamer, self).__init__(
             self,
+            topic=topic,
             streams_info={},
             log_history_filepath=log_history_filepath,
             print_status=print_status,
