@@ -35,6 +35,7 @@ ffmpeg -list_devices true -f dshow -i dummy
 ```
 pactl list short sources
 ```
+
 ```
 arecord -l
 ```
@@ -53,7 +54,8 @@ ffmpeg -list_options true -f dshow -i audio="Microphone (Realtek(R) Audio)"
 
 *Linux:*
 ```
-ffmpeg -list_options true -f [alsa|pulse] -i "hw:0,0"```
+ffmpeg -list_options true -f [alsa|pulse] -i "hw:0,0"
+```
 
 *macOS:*
 ```
