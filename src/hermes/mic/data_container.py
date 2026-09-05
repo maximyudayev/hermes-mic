@@ -86,11 +86,13 @@ class MicrophoneDataContainer(DataContainer):
                         ("Captured by", self._audio_backend),
                         ("Audio rate", f"{self._audio_rate_hz} Hz"),
                         ("Chunk rate", f"{self._chunk_rate_hz} Hz"),
+                        ("Channels", f"{self._num_audio_channels}"),
+                        ("Samples per chunk", f"{self._read_size / self._num_audio_channels / self._num_sample_bytes}"),
                         (
                             "Notes",
-                            f"Time of arrival of {self._read_size} bytes of audio samples from {self._num_audio_channels} channels, "
+                            f"Time of arrival of a {self._read_size} bytes chunk of audio samples from {self._num_audio_channels} channels, "
                             f"{self._num_sample_bytes} bytes each, captured by FFmpeg subprocess from the host device ADC. "
-                            f"Maps one-to-one to the each {self._read_size} chunk of audio samples, and timestamps the newest audio sample in the chunk.",
+                            f"Maps one-to-one to each {self._read_size} chunk of audio samples, and timestamps the newest audio sample in the chunk.",
                         ),
                     ]
                 )
