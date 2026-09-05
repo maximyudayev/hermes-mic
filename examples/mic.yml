@@ -37,7 +37,7 @@ remote_kill_ip: null
 
 logging_spec:
   stream_period_s : 10
-  is_quiet        : False
+  is_quiet        : True
 
   stream_hdf5     : True
   stream_csv      : False

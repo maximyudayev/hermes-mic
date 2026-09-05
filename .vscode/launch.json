@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test Microphone",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "examples/main.py",
+            "args": [
+                "-o",
+                "data",
+                "-f",
+                "examples/mic.yml",
+                "-e",
+                "project=TestMic",
+                "trial=0",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "console": "integratedTerminal",
+            "subProcess": true,
+            "justMyCode": false,
+        },
+    ]
+}
